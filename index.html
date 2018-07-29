@@ -22,7 +22,7 @@
 			padding: 0;
 			width: 100%;
 			height: 100%;
-			background: white;
+			background: none;
 		}
 		#top{
 			width: 100%;
@@ -84,6 +84,7 @@
 			border-radius: 20px;
 			padding: 30px;
 			margin-top: 100px;
+			background: transparent;
 			box-shadow: 10px 5px 10em lightgray;
 		}
 		.one h2{
@@ -140,11 +141,11 @@
 		  background: white;
 		  border: 2px solid #007bb5;
 		  color: #007bb5;
-		  animation: bu;
+		  animation: buu;
 			animation-duration: 1s;
 			animation-direction: alternate;
 			animation-fill-mode: forwards;
-			animation-iteration-count: 4;
+			animation-iteration-count: 2;
 		  
 		}
 		.fa-linkedin:hover{
@@ -169,11 +170,11 @@
 		  	color: #b93580;
 			-webkit-transition: background 1s, border 0.5s, color 1s;
 		  	transform: background 1s,border 0.5s, color 1s;
-		  	animation: bu;
+		  	animation: buu;
 			animation-duration: 0.7s;
 			animation-direction: alternate;
-			animation-fill-mode: backwards;
-			animation-iteration-count: 4;
+			animation-fill-mode: forwards;
+			animation-iteration-count: 2;
 
 		}
 		.fa-instagram:hover{
@@ -187,7 +188,7 @@
 			animation: bu;
 			animation-duration: 0.7s;
 			animation-direction: alternate;
-			animation-fill-mode: backwards;
+			animation-fill-mode: forwards;
 			animation-iteration-count: infinite;
 		}
 
@@ -195,11 +196,11 @@
 		  background: white;
 		  border: 2px solid red;
 		  color: red;
-		  animation: bu;
+		  animation: buu;
 			animation-duration: 0.8s;
 			animation-direction: alternate;
 			animation-fill-mode: forwards;
-			animation-iteration-count: 4;
+			animation-iteration-count: 2;
 
 		}
 		.fa-youtube:hover{
@@ -226,7 +227,18 @@
 				transform: translateY(5px);
 			}
 			100%{
-				transform: translateY(-10px);
+				transform: translateY(-40px);
+			}
+		}
+		@keyframes buu{
+			0%{
+				transform: translateY(0) ;
+			}
+			50%{
+				transform: translateY(5px);
+			}
+			100%{
+				transform: translateY(-200px);
 			}
 		}
 
