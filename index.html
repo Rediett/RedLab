@@ -22,7 +22,7 @@
 			padding: 0;
 			width: 100%;
 			height: 100%;
-			background: whitesmoke;
+			background: white;
 		}
 		#top{
 			width: 100%;
@@ -84,6 +84,7 @@
 			border-radius: 20px;
 			padding: 30px;
 			margin-top: 100px;
+			box-shadow: 10px 5px 10em lightgray;
 		}
 		.one h2{
 			text-align: center;
@@ -133,11 +134,17 @@
 		  text-decoration: none;
 		  margin: 9px;
 		  border-radius: 10px;
+		  box-shadow: 1px 12px 30px gray;
 		}
 		.fa-linkedin {
 		  background: white;
 		  border: 2px solid #007bb5;
 		  color: #007bb5;
+		  animation: bu;
+			animation-duration: 1s;
+			animation-direction: alternate;
+			animation-fill-mode: forwards;
+			animation-iteration-count: 4;
 		  
 		}
 		.fa-linkedin:hover{
@@ -151,6 +158,7 @@
 			animation-direction: alternate;
 			animation-fill-mode: forwards;
 			animation-iteration-count: infinite;
+
 		}
 		.fa-instagram {
 		    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEX///+nxBvIAAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC);
@@ -161,6 +169,11 @@
 		  	color: #b93580;
 			-webkit-transition: background 1s, border 0.5s, color 1s;
 		  	transform: background 1s,border 0.5s, color 1s;
+		  	animation: bu;
+			animation-duration: 0.7s;
+			animation-direction: alternate;
+			animation-fill-mode: backwards;
+			animation-iteration-count: 4;
 
 		}
 		.fa-instagram:hover{
@@ -182,6 +195,11 @@
 		  background: white;
 		  border: 2px solid red;
 		  color: red;
+		  animation: bu;
+			animation-duration: 0.8s;
+			animation-direction: alternate;
+			animation-fill-mode: forwards;
+			animation-iteration-count: 4;
 
 		}
 		.fa-youtube:hover{
@@ -239,7 +257,7 @@
 				<a style="text-decoration: none;" class="download" href="https://github.com/Rediett/testd/archive/master.zip" download="converter">Download zip</a><a class="download" href="https://rediett.github.io/converter/" style="text-decoration: none;width: 100px;border-color: red">Try it</a>
 			</div>
 	</section>
-	<div class="jumbotron" style="margin-bottom: 0;padding: 10px; padding-bottom: 0;" id="b">
+	<div class="jumbotron" style="margin-bottom: 0;padding: 15px;" id="b">
 		<span><a href="https://www.linkedin.com/in/rediet-tadesse-73ba2a165" class="fa fa-linkedin" style="text-decoration: none;"></a></span><span><a href="https://www.instagram.com/rediet.robot/?hl=en" class="fa fa-instagram"  style="text-decoration: none;"></a></span><span><a href="#" class="fa fa-youtube" style="text-decoration: none;"></a></span>
 	</div>
 </div>
