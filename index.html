@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Disc_Plain_red.svg/2000px-Disc_Plain_red.svg.png">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>RedLab</title>
+	<script>
+  		import AOS from 'aos';
+		import 'aos/dist/aos.css'; // You can also use <link> for styles
+		AOS.init();
+	</script>
+	<style type="text/css">
+		html, body{
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			height: 100%;
+		}
+		#top{
+			width: 100%;
+			height: 100vh;
+			background: url(https://images.pexels.com/photos/574077/pexels-photo-574077.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-attachment: fixed;
+			border-radius: 0;
+			text-align: left;
+			min-width: 600px;
+			margin: 0;
+		}
+		#top h1{
+			margin-top: 30vh;
+			margin-left: 10vw;
+			font-size: 10vh;
+			color: white;
+		}
+		#top .a{
+			padding: 16px;
+			margin-top: 20px;
+			margin-left: 10vw;
+			font-size: 20px;
+			color: white;
+			border: 4px solid #b34445;
+			background: none;
+			-webkit-transition: background 0.5s;
+			transform: background 0.5s;
+			border-radius: 9px;
+		}
+		#top .a:hover{
+			background: #b34445;
+		}
+		.go_down{
+			fill: none;
+			stroke: #840505;
+		}
+		.svg_bod{
+			margin-top: 150px;
+			animation: up;
+			animation-duration: 1s;
+			animation-direction: alternate;
+			animation-fill-mode: forwards;
+			animation-iteration-count: infinite;
+		}
+		@keyframes up{
+			from{
+				transform: all translateY(0);
+			}
+			to{
+				transform: translateY(-50px);
+			}
+		}
+		.one{
+			background: linear-gradient(45deg, gray, lightgray);
+			border-radius: 20px;
+			padding: 30px;
+			margin-top: 100px;
+		}
+		.one h2{
+			text-align: center;
+		}
+		.download{
+			text-decoration: none;
+			text-decoration-line: none;
+			text-decoration-style: none;
+			background: none;
+			padding: 5px;
+			width: 30px;
+			font-size: 15px;
+			border-radius: 7px;
+			border: 2px solid red;
+			color: black;
+			-webkit-transition: background 1s, color 2s;
+			transform: background 1s, color 2s;
+			margin-right: 20px;
+		}
+		.download:hover{
+			background: red;
+			color: white;
+		}
+		#sec{
+			padding-bottom: 100px;
+		}
+		p{
+			font-size: 20px;
+		}
+		.man{
+			background: white;
+			padding: 6px;
+			border-radius: 5px;
+		}
+		#top-,#output{
+			padding: 20px;
+			padding-bottom: 5px;
+		}
+		#top- ol{
+			font-size: 20px;
+		}
+		.fa {
+		  padding: 20px;
+		  font-size: 50px;
+		  width: auto;
+		  text-align: center;
+		  text-decoration: none;
+		  margin: 9px;
+		  border-radius: 10px;
+		}
+		.fa-linkedin {
+		  background: white;
+		  border: 2px solid #007bb5;
+		  color: #007bb5;
+		  animation: bu;
+			animation-duration: 1s;
+			animation-direction: alternate;
+			animation-fill-mode: forwards;
+			animation-iteration-count: infinite;
+		}
+		.fa-linkedin:hover{
+			background: #007bb5;
+		  	border: 2px solid none;
+		  	color: white;
+		  	-webkit-transition: background 1s, color 1s, border 0.5s;
+		  	transform: background 1s, color 1s, border 0.5s;
+		}
+		.fa-instagram {
+		    background: -webkit-linear-gradient(45deg,#ffd800,#c34b4b, #7200ef);
+			-webkit-background-clip: text;
+		  	-webkit-text-fill-color: transparent;
+		  	border: 2px solid;
+			border-color: -moz-linear-gradient(45deg,#ffd800,#c34b4b, #7200ef);
+			background-color: red;
+			-webkit-transition: background 1s, border-color 0.5s, -webkit-text-fill-color 2s;
+		  	transform: background 1s,border-color 0.5s,-webkit-text-fill-color 2s;
+		  	animation: bu;
+			animation-duration: 0.7s;
+			animation-direction: alternate;
+			animation-fill-mode: backwards;
+			animation-iteration-count: infinite;
+
+		}
+		.fa-instagram:hover{
+			background: linear-gradient(45deg,#ffd800,#c34b4b, #7200ef);
+			color: white;
+			border-color: none;
+			-webkit-text-fill-color: white;
+		}
+
+		.fa-youtube {
+		  background: white;
+		  border: 2px solid red;
+		  color: red;
+		  animation: bu;
+			animation-duration: 0.8s;
+			animation-direction: alternate;
+			animation-fill-mode: forwards;
+			animation-iteration-count: infinite;
+
+		}
+		.fa-youtube:hover{
+			background: red;
+		  	border: 2px solid none;
+		  	color: white;
+		  	-webkit-transition: background 1s, color 1s, border 0.5s;
+		  	transform: background 1s, color 1s, border 0.5s;
+		}
+		.responsive {
+		    width: 100%;
+		    height: auto;
+		}
+		@keyframes bu{
+			0%{
+				transform: translateY(0) ;
+			}
+			50%{
+				transform: translateY(5px);
+			}
+			100%{
+				transform: translateY(-50px);
+			}
+		}
+
+	</style>
+</head>
+<body>
+<div class="jumbotron" id="top">
+	<div  data-aos="fade-down">
+	<h1><span style="color: red; width: 10px;">Red</span>Lab</h1>
+	<p style="width: 360px;margin-left: 10vw;font-size: 20px; color: white; margin-bottom: 20px"> A place were you can download python librarys created by Rediet.</p><br>
+	<a class="a" onclick="show()" href="#sec" style="text-decoration: none;">Get Started</a></div>
+	<center>
+	<a onclick="show()" href="#sec">
+		<svg width="90" height="60" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" data-aos="fade-down" class="svg_bod">
+ <!-- Created with SVG-edit - https://github.com/SVG-Edit/svgedit-->
+			 <g class="layer">
+			 <title>Layer 1</title>
+			  	<path d="m11.75,12.5l30.25,28.5l32,-27l-31,26l-31.25,-27.5z" fill="#FF0000" id="svg_1" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="5" class="go_down"/>
+			 </g>
+		</svg>
+	</a></center>
+</div> 
+<div id="down">
+	<section class="container" id="sec">
+			<div class="one" data-aos="fade-up">
+				<h2>Text to binary converter</h2><hr>
+				<p>This library allows you to use a function called <span class="man">convert_text_to_binary</span> to convet text input to a binary outpuy.<br>Step1: Download the zip file.<br>Step2: Move the <span class="man">converter.py</span> from the folder to python the same file as you program.<br><div class="jumbotron" id="top-"><h3>Test</h3><hr><ol>import converter as conv</ol><ol>conv.convert_text_to_binary("string input")</ol><div class="jumbotron" id="output"><h4>Output</h4><hr><ol>['s-01110011', 't-01110100', 'r-01110010', 'i-01101001', 'n-01101110', 'g-01100111', ' -00100000', 'i-01101001', 'n-01101110', 'p-01110000', 'u-01110101', 't-01110100']</ol><img src="https://firebasestorage.googleapis.com/v0/b/stortest-45ecb.appspot.com/o/Screen%20Shot%202018-07-29%20at%2011.51.35%20AM.png?alt=media&token=1eb8bf58-a589-4690-861d-f9b91ca4d7ae" class="responsive"></div></div></p>
+				<a style="text-decoration: none;" class="download" href="https://github.com/Rediett/testd/archive/master.zip" download="converter">Download zip</a><a class="download" href="https://rediett.github.io/converter/" style="text-decoration: none;width: 100px;border-color: red">Try it</a>
+			</div>
+	</section>
+	<div class="jumbotron" style="margin-bottom: 0;padding: 10px; padding-bottom: 0;" id="b">
+		<span><a href="https://www.linkedin.com/in/rediet-tadesse-73ba2a165" class="fa fa-linkedin" style="text-decoration: none;"></a></span><span><a href="https://www.instagram.com/rediet.robot/?hl=en" class="fa fa-instagram"  style="text-decoration: none;"></a></span><span><a href="#" class="fa fa-youtube" style="text-decoration: none;"></a></span>
+	</div>
+</div>
+<script type="text/javascript">
+	var con = document.getElementById('down');
+	con.style.visibility= "hidden";
+	function show() {
+		con.style.visibility= "visible";
+	}
+</script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    AOS.init({
+  duration: 1200,
+})
+
+  </script>
+</body>
+</html>
