@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
+<html><head>
 	<link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Disc_Plain_red.svg/2000px-Disc_Plain_red.svg.png">
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -30,7 +28,7 @@
 			width: 100%;
 		}
 		#top{
-			width: 100vw;
+			width: 100%;
 			height: 100vh;
 			background: url(https://images.pexels.com/photos/943096/pexels-photo-943096.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
 			background-size: cover;
@@ -87,10 +85,12 @@
 		.one{
 			border-radius: 20px;
 			padding: 30px;
+			margin: 0;
 			margin-top: 100px;
 			background: transparent;
 			box-shadow: 10px 5px 10em lightgray;
 			font-size: 1vh;
+			width: 100vh;
 		}
 		.one h2{
 			text-align: center;
@@ -115,8 +115,9 @@
 			color: white;
 		}
 		#sec{
-			padding-bottom: 100px;
-			width: 100%;
+			margin: auto;
+			padding-bottom: 0;
+			width: 100vh;
 		    height: auto;
 		    font-size: 1vw;
 		}
@@ -212,6 +213,12 @@
 		    width: 100%;
 		    height: auto;
 		}
+		#b{
+			margin-bottom: 0;
+			padding: 15px; 
+			width: 100%;
+			margin-top: 100px;
+		}
 		@keyframes bu{
 			0%{
 				transform: translateY(0) ;
@@ -234,22 +241,44 @@
 				transform: translateY(-200px);
 			}
 		}
+		@media only screen and (max-width: 714px) {
+		    #top{
+				width: 100vh;
+				height: 100vh;
+				background: url(https://images.pexels.com/photos/943096/pexels-photo-943096.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center;
+				background-attachment: fixed;
+				border-radius: 0;
+				text-align: left;
+				margin: 0;
+				text-shadow: black 2px 2px 2px;
+			}
+			#b{
+				margin-bottom: 0;
+				padding: 15px; 
+				width: 100vh;
+				margin-top: 100px;
+			}
+		}
 
 	</style>
 </head>
-<body>
+
+<body data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="0">
 <div class="jumbotron" id="top">
 	<div>
-	<h1 data-aos="fade-down"><span style="color: red; width: 10px;">Red</span>Lab</h1>
-	<p style="width: 360px;margin-left: 10vw;font-size: 20px; color: white; margin-bottom: 20px" data-aos="fade-right"> A place were you can download python libraries created by Rediet.</p><br>
-	<a  data-aos="fade-up" class="a" href="#sec" style="text-decoration: none;">Get Started</a></div>
+	<h1 data-aos="fade-down" class="aos-init aos-animate"><span style="color: red; width: 10px;">Red</span>Lab</h1>
+	<p style="width: 360px;margin-left: 10vw;font-size: 20px; color: white; margin-bottom: 20px" data-aos="fade-right" class="aos-init aos-animate"> A place were you can download python projects created by Rediet.</p><br>
+	<a data-aos="fade-up" class="a aos-init aos-animate" href="#sec" style="text-decoration: none;">Get Started</a></div>
 	<center>
 	<a href="#sec">
-		<svg width="90" height="60" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:se="http://svg-edit.googlecode.com" class="svg_bod" data-aos="fade-down">
+		<svg width="90" height="60" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:se="http://svg-edit.googlecode.com" class="svg_bod aos-init aos-animate" data-aos="fade-down">
  <!-- Created with SVG-edit - https://github.com/SVG-Edit/svgedit-->
  <g class="layer">
   <title>Layer 1</title>
-  <path class="go_down" d="m7.75,9.5l26.44679,19.5l29.80321,-21.42105l-29.02811,20.70175c-9.07396,-5.26023 -18.14793,-13.52047 -27.22189,-18.7807z" fill="#FF0000" id="svg_1" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="3"/>
+  <path class="go_down" d="m7.75,9.5l26.44679,19.5l29.80321,-21.42105l-29.02811,20.70175c-9.07396,-5.26023 -18.14793,-13.52047 -27.22189,-18.7807z" fill="#FF0000" id="svg_1" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="3"></path>
  </g>
 </svg>
 
@@ -259,12 +288,18 @@
 	<section class="container" id="sec">
 			<div class="one">
 				<h2>Text to binary converter</h2><hr>
-				<p>This library allows you to use a function called <span class="man">convert_text_to_binary</span> to convet text input to a binary output.<br>Step 1: Download the zip file.<br>Step 2: Move the <span class="man">converter.py</span> from the folder to python the same file as you program.<br><div class="jumbotron" id="top-"><h3>Test</h3><hr><ol>import converter as conv</ol><ol>conv.convert_text_to_binary("string input")</ol><div class="jumbotron" id="output"><h4>Output</h4><hr><ol>['s-01110011', 't-01110100', 'r-01110010', 'i-01101001', 'n-01101110', 'g-01100111', ' -00100000', 'i-01101001', 'n-01101110', 'p-01110000', 'u-01110101', 't-01110100']</ol><img src="https://firebasestorage.googleapis.com/v0/b/stortest-45ecb.appspot.com/o/Screen%20Shot%202018-07-29%20at%2011.51.35%20AM.png?alt=media&token=1eb8bf58-a589-4690-861d-f9b91ca4d7ae" class="responsive"></div></div></p>
+				<p>This library allows you to use a function called <span class="man">convert_text_to_binary</span> to convet text input to a binary output.<br>Step 1: Download the zip file.<br>Step 2: Move the <span class="man">converter.py</span> from the folder to python the same file as you program.<br></p><div class="jumbotron" id="top-"><h3>Test</h3><hr><ol>import converter as conv</ol><ol>conv.convert_text_to_binary("string input")</ol><div class="jumbotron" id="output"><h4>Output</h4><hr><ol>['s-01110011', 't-01110100', 'r-01110010', 'i-01101001', 'n-01101110', 'g-01100111', ' -00100000', 'i-01101001', 'n-01101110', 'p-01110000', 'u-01110101', 't-01110100']</ol><img src="https://firebasestorage.googleapis.com/v0/b/stortest-45ecb.appspot.com/o/Screen%20Shot%202018-07-29%20at%2011.51.35%20AM.png?alt=media&amp;token=1eb8bf58-a589-4690-861d-f9b91ca4d7ae" class="responsive"></div></div><p></p>
 				<a style="text-decoration: none;" class="download" href="https://github.com/Rediett/testd/archive/master.zip" download="converter">Download zip</a><a class="download" href="https://rediett.github.io/converter/" style="text-decoration: none;width: 100px;border-color: red" target="_blank">Try it</a>
 			</div>
 	</section>
-	<div class="jumbotron" style="margin-bottom: 0;padding: 15px;" id="b">
-		<span><a href="https://www.linkedin.com/in/rediet-tadesse-73ba2a165" class="fa fa-linkedin" style="text-decoration: none;" target="_blank"></a></span><span><a href="https://www.instagram.com/rediet.robot/?hl=en" class="fa fa-instagram"  style="text-decoration: none;" target="_blank"></a></span><span><a href="#" class="fa fa-youtube" style="text-decoration: none;" target="_blank"></a></span>
+	<section class="container" id="sec">
+			<div class="one">
+				<h2>Hard coded virtual assistant </h2><hr>
+				<p>Coming soon...</p>
+			</div>
+	</section>
+	<div class="jumbotron" id="b">
+		<span><a href="https://www.linkedin.com/in/rediet-tadesse-73ba2a165" class="fa fa-linkedin" style="text-decoration: none;" target="_blank"></a></span><span><a href="https://www.instagram.com/rediet.robot/?hl=en" class="fa fa-instagram" style="text-decoration: none;" target="_blank"></a></span><span><a href="#" class="fa fa-youtube" style="text-decoration: none;" target="_blank"></a></span>
 	</div>
 </div>
 <script type="text/javascript">
@@ -282,5 +317,6 @@
 })
 
   </script>
-</body>
-</html>
+
+
+</body></html>
